@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/marketFragment">
+
+    <fragment
+        android:id="@+id/marketFragment"
+        android:name="com.loodos.cryptocurrency.ui.market.MarketFragment"
+        android:label="MarketFragment"
+        tools:layout="@layout/fragment_market" />
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.loodos.cryptocurrency.ui.favorites.FavoritesFragment"
+        android:label="FavoritesFragment"
+        tools:layout="@layout/fragment_favorites" />
+</navigation>
