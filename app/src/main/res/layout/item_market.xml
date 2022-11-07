@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/coin_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/btc_photo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/coin_texts_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/coin_logo">
+
+            <TextView
+                android:id="@+id/coin_abbreviation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BTC"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro_text_regular"/>
+
+            <TextView
+                android:id="@+id/coin_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bitcoin"
+                android:textSize="15sp"
+                android:fontFamily="@font/sf_pro_text_regular"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/coin_price_text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/coin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="36.873"
+                android:textSize="17sp"
+                android:textColor="@color/coinPriceGreen"
+                android:fontFamily="@font/sf_pro_text_regular"/>
+
+            <TextView
+                android:id="@+id/coin_change_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0.64"
+                android:textSize="15sp"
+                android:textColor="@color/coinPriceGreen"
+                android:fontFamily="@font/sf_pro_text_regular"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
